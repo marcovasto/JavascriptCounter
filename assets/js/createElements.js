@@ -32,51 +32,97 @@ display.textContent = '0';
 display.style.fontSize = '50px';
 display.style.fontWeight = 'bold';
 display.style.color = '#88FF88';
-display.style.marginBottom = '20px';
-display.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-display.style.backdropFilter = 'blur(5px)';
-display.style.padding = '10px 20px';
-display.style.borderRadius = '10px';
 
 // === Buttons Wrapper ===
 const buttonsWrapper = document.createElement('div');
 buttonsWrapper.style.display = 'flex';
-
 buttonsWrapper.style.width = '100%';
-
-// === Buttons Styles (Shared) ===
-const buttonBaseStyle = {
-  fontSize: '25px',
-  height: '50px',
-  flex: '1',
-  border: '1px solid #88FF88',
-  cursor: 'pointer',
-  backgroundColor: 'rgba(255, 255, 255, 0.2)',
-  backdropFilter: 'blur(5px)'
-};
+buttonsWrapper.style.marginTop = '20px';
+buttonsWrapper.style.marginBottom = '20px';
 
 // === Button Minus ===
 const btnMinus = document.createElement('button');
 btnMinus.textContent = '−';
-Object.assign(btnMinus.style, buttonBaseStyle);
-
+btnMinus.style.fontSize = '25px';
+btnMinus.style.height = '50px';
+btnMinus.style.flex = '1';
+btnMinus.style.border = '1px solid #88FF88';
+btnMinus.style.cursor = 'pointer';
+btnMinus.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+btnMinus.style.backdropFilter = 'blur(5px)';
 
 // === Button Reset ===
 const btnReset = document.createElement('button');
 btnReset.textContent = 'Reset';
-Object.assign(btnReset.style, buttonBaseStyle);
-
+btnReset.style.fontSize = '25px';
+btnReset.style.height = '50px';
+btnReset.style.flex = '1';
+btnReset.style.border = '1px solid #88FF88';
+btnReset.style.cursor = 'pointer';
+btnReset.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+btnReset.style.backdropFilter = 'blur(5px)';
 
 // === Button Plus ===
 const btnPlus = document.createElement('button');
 btnPlus.textContent = '+';
-Object.assign(btnPlus.style, buttonBaseStyle);
+btnPlus.style.fontSize = '25px';
+btnPlus.style.height = '50px';
+btnPlus.style.flex = '1';
+btnPlus.style.border = '1px solid #88FF88';
+btnPlus.style.cursor = 'pointer';
+btnPlus.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+btnPlus.style.backdropFilter = 'blur(5px)';
 
+// === Social Wrapper ===
+const socialWrapper = document.createElement('div');
+socialWrapper.style.display = 'flex';
+socialWrapper.style.justifyContent = 'space-around';
+socialWrapper.style.alignItems = 'center';
+socialWrapper.style.width = '100%';
+socialWrapper.style.marginTop = '10px';
 
-// === Appendi gli elementi ===
+// === GitHub Icon Link ===
+const githubLink = document.createElement('a');
+githubLink.href = 'https://github.com/marcovasto';
+githubLink.target = '_blank';
+githubLink.rel = 'noopener';
+
+const githubImg = document.createElement('img');
+githubImg.src = 'assets/images/github.svg'; // mantieni colore originale e dimensioni
+githubImg.alt = 'GitHub Icon';
+githubImg.style.width = '30px';
+githubImg.style.height = '30px';
+githubImg.style.cursor = 'pointer';
+
+githubLink.appendChild(githubImg);
+
+// === LinkedIn Icon Link ===
+const linkedinLink = document.createElement('a');
+linkedinLink.href = 'https://www.linkedin.com/in/marco-vasto-216621339/';
+linkedinLink.target = '_blank';
+linkedinLink.rel = 'noopener';
+
+const linkedinImg = document.createElement('img');
+linkedinImg.src = 'assets/images/linkedin.svg';
+linkedinImg.alt = 'LinkedIn Icon';
+linkedinImg.style.width = '30px';
+linkedinImg.style.height = '30px';
+linkedinImg.style.cursor = 'pointer';
+
+linkedinLink.appendChild(linkedinImg);
+
+// === Append icons to social wrapper ===
+socialWrapper.appendChild(githubLink);
+socialWrapper.appendChild(linkedinLink);
+
+// === Append elements to container ===
 buttonsWrapper.appendChild(btnMinus);
 buttonsWrapper.appendChild(btnReset);
 buttonsWrapper.appendChild(btnPlus);
+
 container.appendChild(display);
 container.appendChild(buttonsWrapper);
+container.appendChild(socialWrapper);
+
+// === Append container to body ===
 document.body.appendChild(container);
