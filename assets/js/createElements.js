@@ -2,32 +2,40 @@
 document.documentElement.style.height = '100%';
 document.body.style.height = '100%';
 document.body.style.margin = '0';
+
 document.body.style.display = 'flex';
+document.body.style.flexDirection = 'column';
 document.body.style.justifyContent = 'center';
 document.body.style.alignItems = 'center';
 
-document.body.style.backgroundImage = 'url("./assets/images/abstract.jpeg")';
+document.body.style.backgroundImage = 'url("./assets/images/abstractOne.jpeg")';
 document.body.style.backgroundSize = 'cover';
 document.body.style.backgroundRepeat = 'no-repeat';
 document.body.style.backgroundPosition = 'center';
 
 // === Counter Container ===
 const container = document.createElement('div');
+
 container.style.width = '300px';
 container.style.height = '300px';
+
 container.style.border = '2px solid #88FF88';
 container.style.borderRadius = '50%';
+
 container.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
 container.style.backdropFilter = 'blur(5px)';
+
 container.style.display = 'flex';
 container.style.flexDirection = 'column';
 container.style.justifyContent = 'center';
 container.style.alignItems = 'center';
+
 container.style.zIndex = '1';
 container.style.overflow = 'hidden';
 
 // === Display ===
 const display = document.createElement('div');
+
 display.textContent = '0';
 display.style.fontSize = '50px';
 display.style.fontWeight = 'bold';
@@ -35,8 +43,9 @@ display.style.color = '#88FF88';
 
 // === Buttons Wrapper ===
 const buttonsWrapper = document.createElement('div');
+
 buttonsWrapper.style.display = 'flex';
-buttonsWrapper.style.width = '100%';
+buttonsWrapper.style.width = '102%'; // >100% needed to put corner border in overflow and be hidden
 buttonsWrapper.style.marginTop = '20px';
 buttonsWrapper.style.marginBottom = '20px';
 
@@ -111,6 +120,57 @@ linkedinImg.style.cursor = 'pointer';
 
 linkedinLink.appendChild(linkedinImg);
 
+// === Background Choice Wrapper ===
+const backgroundWrapper = document.createElement('div');
+backgroundWrapper.style.width = '300px';
+backgroundWrapper.style.paddingTop = '20px';
+backgroundWrapper.style.paddingBottom = '20px';
+backgroundWrapper.style.marginTop = '30px';
+
+backgroundWrapper.style.display = 'flex';
+backgroundWrapper.style.justifyContent = 'space-around'
+
+backgroundWrapper.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+backgroundWrapper.style.backdropFilter = 'blur(5px)';
+backgroundWrapper.style.border = '1px solid #88FF88';
+backgroundWrapper.style.borderRadius = '5px';
+
+// Background Choice
+const backgroundOne = document.createElement('div');
+backgroundOne.style.width = '30px';
+backgroundOne.style.height = '30px';
+//backgroundOne.style.border = '1px solid #88FF88';
+backgroundOne.style.borderRadius = '50%';
+
+backgroundOne.style.backgroundImage = 'url("./assets/images/abstractOne.jpeg")';
+backgroundOne.style.backgroundSize = 'cover';
+backgroundOne.style.backgroundRepeat = 'no-repeat';
+backgroundOne.style.backgroundPosition = 'center';
+
+const backgroundTwo = document.createElement('div');
+backgroundTwo.style.width = '30px';
+backgroundTwo.style.height = '30px';
+backgroundTwo.style.backgroundColor = 'red';
+//backgroundTwo.style.border = '1px solid #88FF88';
+backgroundTwo.style.borderRadius = '50%';
+
+backgroundTwo.style.backgroundImage = 'url("./assets/images/abstractTwo.jpg")';
+backgroundTwo.style.backgroundSize = 'cover';
+backgroundTwo.style.backgroundRepeat = 'no-repeat';
+backgroundTwo.style.backgroundPosition = 'center';
+
+const backgroundThree = document.createElement('div');
+backgroundThree.style.width = '30px';
+backgroundThree.style.height = '30px';
+backgroundThree.style.backgroundColor = 'red';
+//backgroundThree.style.border = '1px solid #88FF88';
+backgroundThree.style.borderRadius = '50%';
+
+backgroundThree.style.backgroundImage = 'url("./assets/images/abstractThree.jpg")';
+backgroundThree.style.backgroundSize = 'cover';
+backgroundThree.style.backgroundRepeat = 'no-repeat';
+backgroundThree.style.backgroundPosition = 'center';
+
 // === Append icons to social wrapper ===
 socialWrapper.appendChild(githubLink);
 socialWrapper.appendChild(linkedinLink);
@@ -126,3 +186,11 @@ container.appendChild(socialWrapper);
 
 // === Append container to body ===
 document.body.appendChild(container);
+
+// Append Background Choice to Wrapper
+backgroundWrapper.appendChild(backgroundOne);
+backgroundWrapper.appendChild(backgroundTwo);
+backgroundWrapper.appendChild(backgroundThree);
+
+// Append Background Wrapper
+document.body.appendChild(backgroundWrapper);

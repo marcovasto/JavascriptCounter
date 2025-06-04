@@ -15,3 +15,15 @@ btnReset.addEventListener('click', () => {
   counter = 0;
   display.textContent = counter;
 });
+
+backgroundOne.addEventListener('click', () => {
+  document.body.style.backgroundImage = 'url("./assets/images/abstractOne.jpeg")';
+});
+
+backgroundTwo.addEventListener('click', () => {
+  document.body.style.backgroundImage = 'url("./assets/images/abstractTwo.jpg")';
+});
+
+backgroundThree.addEventListener('click', () => {
+  document.body.style.backgroundImage = 'url("./assets/images/abstractThree.jpg")';
+});
