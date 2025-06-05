@@ -1,4 +1,4 @@
-// === HTML and Body setup ===
+// HTML and Body setup
 document.documentElement.style.height = '100%';
 document.body.style.height = '100%';
 document.body.style.margin = '0';
@@ -12,8 +12,9 @@ document.body.style.backgroundImage = 'url("./assets/images/abstractOne.jpeg")';
 document.body.style.backgroundSize = 'cover';
 document.body.style.backgroundRepeat = 'no-repeat';
 document.body.style.backgroundPosition = 'center';
+document.body.style.fontFamily = "'Orbitron', sans-serif";
 
-// === Counter Container ===
+// Counter Container
 const container = document.createElement('div');
 
 container.style.width = '300px';
@@ -22,18 +23,17 @@ container.style.height = '300px';
 container.style.border = '2px solid #88FF88';
 container.style.borderRadius = '50%';
 
-container.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-container.style.backdropFilter = 'blur(5px)';
+container.style.backgroundColor = 'rgba(20, 20, 20, 0.3)';
+container.style.backdropFilter = 'blur(4px)';
 
 container.style.display = 'flex';
 container.style.flexDirection = 'column';
 container.style.justifyContent = 'center';
 container.style.alignItems = 'center';
 
-container.style.zIndex = '1';
 container.style.overflow = 'hidden';
 
-// === Display ===
+// Display
 const display = document.createElement('div');
 
 display.textContent = '0';
@@ -41,48 +41,52 @@ display.style.fontSize = '50px';
 display.style.fontWeight = 'bold';
 display.style.color = '#88FF88';
 
-// === Buttons Wrapper ===
+// Buttons Wrapper
 const buttonsWrapper = document.createElement('div');
-
 buttonsWrapper.style.display = 'flex';
 buttonsWrapper.style.width = '102%'; // >100% needed to put corner border in overflow and be hidden
 buttonsWrapper.style.marginTop = '20px';
 buttonsWrapper.style.marginBottom = '20px';
+buttonsWrapper.style.backgroundColor = 'rgba(20, 20, 20, 0.3)';
+buttonsWrapper.style.backdropFilter = 'blur(4px)';
 
-// === Button Minus ===
+// Button Minus
 const btnMinus = document.createElement('button');
 btnMinus.textContent = '−';
+btnMinus.style.color = '#88FF88';
 btnMinus.style.fontSize = '25px';
 btnMinus.style.height = '50px';
 btnMinus.style.flex = '1';
 btnMinus.style.border = '1px solid #88FF88';
 btnMinus.style.cursor = 'pointer';
-btnMinus.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-btnMinus.style.backdropFilter = 'blur(5px)';
+btnMinus.style.backgroundColor = 'transparent';
+btnMinus.style.touchAction = 'manipulation';
 
-// === Button Reset ===
+// Button Reset
 const btnReset = document.createElement('button');
-btnReset.textContent = 'Reset';
+btnReset.textContent = 'RESET';
+btnReset.style.color = '#88FF88';
 btnReset.style.fontSize = '25px';
 btnReset.style.height = '50px';
 btnReset.style.flex = '1';
 btnReset.style.border = '1px solid #88FF88';
 btnReset.style.cursor = 'pointer';
-btnReset.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-btnReset.style.backdropFilter = 'blur(5px)';
+btnReset.style.backgroundColor = 'transparent';
+btnReset.style.touchAction = 'manipulation';
 
-// === Button Plus ===
+// Button Plus
 const btnPlus = document.createElement('button');
 btnPlus.textContent = '+';
+btnPlus.style.color = '#88FF88';
 btnPlus.style.fontSize = '25px';
 btnPlus.style.height = '50px';
 btnPlus.style.flex = '1';
 btnPlus.style.border = '1px solid #88FF88';
 btnPlus.style.cursor = 'pointer';
-btnPlus.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-btnPlus.style.backdropFilter = 'blur(5px)';
+btnPlus.style.backgroundColor = 'transparent';
+btnPlus.style.touchAction = 'manipulation';
 
-// === Social Wrapper ===
+// Social Wrapper
 const socialWrapper = document.createElement('div');
 socialWrapper.style.display = 'flex';
 socialWrapper.style.justifyContent = 'space-around';
@@ -90,14 +94,14 @@ socialWrapper.style.alignItems = 'center';
 socialWrapper.style.width = '100%';
 socialWrapper.style.marginTop = '10px';
 
-// === GitHub Icon Link ===
+// GitHub Icon Link
 const githubLink = document.createElement('a');
 githubLink.href = 'https://github.com/marcovasto';
 githubLink.target = '_blank';
 githubLink.rel = 'noopener';
 
 const githubImg = document.createElement('img');
-githubImg.src = 'assets/images/github.svg'; // mantieni colore originale e dimensioni
+githubImg.src = 'assets/images/github.svg';
 githubImg.alt = 'GitHub Icon';
 githubImg.style.width = '30px';
 githubImg.style.height = '30px';
@@ -105,7 +109,7 @@ githubImg.style.cursor = 'pointer';
 
 githubLink.appendChild(githubImg);
 
-// === LinkedIn Icon Link ===
+// LinkedIn Icon Link
 const linkedinLink = document.createElement('a');
 linkedinLink.href = 'https://www.linkedin.com/in/marco-vasto-216621339/';
 linkedinLink.target = '_blank';
@@ -120,26 +124,28 @@ linkedinImg.style.cursor = 'pointer';
 
 linkedinLink.appendChild(linkedinImg);
 
-// === Background Choice Wrapper ===
+// === Background Choice Wrapper
 const backgroundWrapper = document.createElement('div');
 backgroundWrapper.style.width = '300px';
 backgroundWrapper.style.paddingTop = '20px';
 backgroundWrapper.style.paddingBottom = '20px';
-backgroundWrapper.style.marginTop = '30px';
+backgroundWrapper.style.marginBottom = '30px';
 
 backgroundWrapper.style.display = 'flex';
-backgroundWrapper.style.justifyContent = 'space-around'
+backgroundWrapper.style.justifyContent = 'space-around';
 
-backgroundWrapper.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-backgroundWrapper.style.backdropFilter = 'blur(5px)';
+backgroundWrapper.style.backgroundColor = 'rgba(20, 20, 20, 0.3)';
+backgroundWrapper.style.backdropFilter = 'blur(4px)';
 backgroundWrapper.style.border = '1px solid #88FF88';
 backgroundWrapper.style.borderRadius = '5px';
+backgroundWrapper.style.borderBottomLeftRadius = '100px';
+backgroundWrapper.style.borderBottomRightRadius = '100px';
 
 // Background Choice
 const backgroundOne = document.createElement('div');
 backgroundOne.style.width = '30px';
 backgroundOne.style.height = '30px';
-//backgroundOne.style.border = '1px solid #88FF88';
+
 backgroundOne.style.borderRadius = '50%';
 
 backgroundOne.style.backgroundImage = 'url("./assets/images/abstractOne.jpeg")';
@@ -147,11 +153,12 @@ backgroundOne.style.backgroundSize = 'cover';
 backgroundOne.style.backgroundRepeat = 'no-repeat';
 backgroundOne.style.backgroundPosition = 'center';
 
+backgroundOne.style.cursor = 'pointer';
+
 const backgroundTwo = document.createElement('div');
 backgroundTwo.style.width = '30px';
 backgroundTwo.style.height = '30px';
-backgroundTwo.style.backgroundColor = 'red';
-//backgroundTwo.style.border = '1px solid #88FF88';
+
 backgroundTwo.style.borderRadius = '50%';
 
 backgroundTwo.style.backgroundImage = 'url("./assets/images/abstractTwo.jpg")';
@@ -159,17 +166,28 @@ backgroundTwo.style.backgroundSize = 'cover';
 backgroundTwo.style.backgroundRepeat = 'no-repeat';
 backgroundTwo.style.backgroundPosition = 'center';
 
+backgroundTwo.style.cursor = 'pointer';
+
 const backgroundThree = document.createElement('div');
 backgroundThree.style.width = '30px';
 backgroundThree.style.height = '30px';
-backgroundThree.style.backgroundColor = 'red';
-//backgroundThree.style.border = '1px solid #88FF88';
+
 backgroundThree.style.borderRadius = '50%';
 
 backgroundThree.style.backgroundImage = 'url("./assets/images/abstractThree.jpg")';
 backgroundThree.style.backgroundSize = 'cover';
 backgroundThree.style.backgroundRepeat = 'no-repeat';
 backgroundThree.style.backgroundPosition = 'center';
+
+backgroundThree.style.cursor = 'pointer';
+
+// Append Background Choice to Wrapper
+backgroundWrapper.appendChild(backgroundOne);
+backgroundWrapper.appendChild(backgroundTwo);
+backgroundWrapper.appendChild(backgroundThree);
+
+// Append Background Wrapper
+document.body.appendChild(backgroundWrapper);
 
 // === Append icons to social wrapper ===
 socialWrapper.appendChild(githubLink);
@@ -187,10 +205,4 @@ container.appendChild(socialWrapper);
 // === Append container to body ===
 document.body.appendChild(container);
 
-// Append Background Choice to Wrapper
-backgroundWrapper.appendChild(backgroundOne);
-backgroundWrapper.appendChild(backgroundTwo);
-backgroundWrapper.appendChild(backgroundThree);
 
-// Append Background Wrapper
-document.body.appendChild(backgroundWrapper);
