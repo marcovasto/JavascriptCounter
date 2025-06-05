@@ -1,4 +1,4 @@
-// === Counter Logic ===
+// Counter Logic
 let counter = 0;
 
 btnMinus.addEventListener('click', () => {

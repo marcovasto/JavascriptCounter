@@ -17,10 +17,10 @@ Here you can find a live preview of [my counter](https://marcovasto.github.io/Ja
 ## ✨ Features
 
 - **Interactive Counter**: Users can increment, decrement, and reset the counter using three dedicated buttons
-- **Background Customization**: Easily customizable background image and styles to enhance the visual appearance
+- **Background Customization**: Easily selectable background image and styles to enhance the visual appearance
 - **Mobile-First Design**: Layout and dimensions are optimized primarily for mobile devices, ensuring full visibility and accessibility
 - **Social Media Integration**: Open Graph meta tags to enhance sharing on social platforms
-- **Modern UI**: Clean, digital-clock-inspired design using only JavaScript and inline styles
+- **Modern UI**: Clean, digital-clock-inspired design using only JavaScript
 
 ## 🌳 Project Structure
 ```

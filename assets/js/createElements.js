@@ -44,7 +44,7 @@ display.style.color = '#88FF88';
 // Buttons Wrapper
 const buttonsWrapper = document.createElement('div');
 buttonsWrapper.style.display = 'flex';
-buttonsWrapper.style.width = '102%'; // >100% needed to put corner border in overflow and be hidden
+buttonsWrapper.style.width = '100%';
 buttonsWrapper.style.marginTop = '20px';
 buttonsWrapper.style.marginBottom = '20px';
 buttonsWrapper.style.backgroundColor = 'rgba(20, 20, 20, 0.3)';
@@ -57,7 +57,10 @@ btnMinus.style.color = '#88FF88';
 btnMinus.style.fontSize = '25px';
 btnMinus.style.height = '50px';
 btnMinus.style.flex = '1';
-btnMinus.style.border = '1px solid #88FF88';
+btnMinus.style.borderTop = '2px solid #88FF88';
+btnMinus.style.borderBottom = '2px solid #88FF88';
+btnMinus.style.borderLeft = 'none';
+btnMinus.style.borderRight = 'none';
 btnMinus.style.cursor = 'pointer';
 btnMinus.style.backgroundColor = 'transparent';
 btnMinus.style.touchAction = 'manipulation';
@@ -69,7 +72,7 @@ btnReset.style.color = '#88FF88';
 btnReset.style.fontSize = '25px';
 btnReset.style.height = '50px';
 btnReset.style.flex = '1';
-btnReset.style.border = '1px solid #88FF88';
+btnReset.style.border = '2px solid #88FF88';
 btnReset.style.cursor = 'pointer';
 btnReset.style.backgroundColor = 'transparent';
 btnReset.style.touchAction = 'manipulation';
@@ -81,7 +84,10 @@ btnPlus.style.color = '#88FF88';
 btnPlus.style.fontSize = '25px';
 btnPlus.style.height = '50px';
 btnPlus.style.flex = '1';
-btnPlus.style.border = '1px solid #88FF88';
+btnPlus.style.borderTop = '2px solid #88FF88';
+btnPlus.style.borderBottom = '2px solid #88FF88';
+btnPlus.style.borderLeft = 'none';
+btnPlus.style.borderRight = 'none';
 btnPlus.style.cursor = 'pointer';
 btnPlus.style.backgroundColor = 'transparent';
 btnPlus.style.touchAction = 'manipulation';
@@ -124,7 +130,7 @@ linkedinImg.style.cursor = 'pointer';
 
 linkedinLink.appendChild(linkedinImg);
 
-// === Background Choice Wrapper
+// Background Choice Wrapper
 const backgroundWrapper = document.createElement('div');
 backgroundWrapper.style.width = '300px';
 backgroundWrapper.style.paddingTop = '20px';
@@ -136,7 +142,7 @@ backgroundWrapper.style.justifyContent = 'space-around';
 
 backgroundWrapper.style.backgroundColor = 'rgba(20, 20, 20, 0.3)';
 backgroundWrapper.style.backdropFilter = 'blur(4px)';
-backgroundWrapper.style.border = '1px solid #88FF88';
+backgroundWrapper.style.border = '2px solid #88FF88';
 backgroundWrapper.style.borderRadius = '5px';
 backgroundWrapper.style.borderBottomLeftRadius = '100px';
 backgroundWrapper.style.borderBottomRightRadius = '100px';
@@ -189,11 +195,11 @@ backgroundWrapper.appendChild(backgroundThree);
 // Append Background Wrapper
 document.body.appendChild(backgroundWrapper);
 
-// === Append icons to social wrapper ===
+// Append icons to social wrapper
 socialWrapper.appendChild(githubLink);
 socialWrapper.appendChild(linkedinLink);
 
-// === Append elements to container ===
+// Append elements to container
 buttonsWrapper.appendChild(btnMinus);
 buttonsWrapper.appendChild(btnReset);
 buttonsWrapper.appendChild(btnPlus);
@@ -202,7 +208,7 @@ container.appendChild(display);
 container.appendChild(buttonsWrapper);
 container.appendChild(socialWrapper);
 
-// === Append container to body ===
+// Append container to body
 document.body.appendChild(container);
 
 
